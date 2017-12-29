@@ -4,5 +4,5 @@
 
 ### Built with:
 
-Firebase 
-React Native 
+- Firebase 
+- React Native 
