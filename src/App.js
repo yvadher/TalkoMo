@@ -17,7 +17,7 @@ import {
   Scene,
 } from 'react-native-router-flux';
 
-import Welcome from './Components/Welcome';
+import Welcome from './Components/Welcome'
 import Login from './Components/Login';
 import Chat from './Components/Chat';
 
@@ -27,9 +27,9 @@ export default class App extends Component<{}> {
     return (
       <Router>
         <Scene key='root'>
-          <Scene key="Welcome" component='Welcome'/>
-          <Scene key="Login" component='Login' title='Login'/>
-          <Scene key="Chat" component='Chat' title='Chat'/>
+          <Scene hideNavBar='false' key="Welcome" component={Welcome}/>
+          <Scene key="Login" component={Login} title='Login'/>
+          <Scene key="Chat" component={Chat} title='Chat'/>
         </Scene>
       </Router>
     );
