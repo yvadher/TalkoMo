@@ -9,7 +9,7 @@ import { Actions, }  from 'react-native-router-flux'
 
 export default class Welcome extends React.Component{
   componentDidMount() {
-    setInterval(() => {
+    setTimeout(() => {
       Actions.Login();
     }, 2000);
   }
