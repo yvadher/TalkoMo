@@ -22,6 +22,7 @@ class Api {
         });
       }
     });
+    provider = new firebase.auth.GoogleAuthProvider();
   }
   setUid(value) {
     this.uid = value;
