@@ -14,14 +14,13 @@ export default class Login extends Component {
   }
   render() {
     return (
-      <Container>
+      <Container >
         <Header style={{backgroundColor: '#2c3e50'}}>
           <Body>
-
-            <Title>TolkoMo</Title>
+            <Title><Icon name='md-menu' style={{color: 'white', fontSize: 25}} />  TolkoMo</Title>
           </Body>
         </Header>
-        <Content st>
+        <Content>
           <View style={styles.titleWrapper}>
             <Text style={styles.title}>TalkoMo</Text>
           </View>
@@ -33,6 +32,7 @@ export default class Login extends Component {
                 this.setState({
                   name : text,
                 });
+                console.log(this.state.name);
               }}/>
             </Item>
             <Item floatingLabel last>
@@ -42,7 +42,9 @@ export default class Login extends Component {
             <Button primary style={styles.submit} onPress={
               ()=>{
                 //Navigate
-                Actions.Chat(this.state.name);
+                Actions.Chat({
+                  chatName: this.state.name
+                });
               }
             }><Text> Primary </Text></Button>
           </Form>
